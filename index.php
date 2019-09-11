@@ -1,17 +1,20 @@
 <?php
+
 require_once(__DIR__ . '/config.php');
 require_once(__DIR__ . '/Poll.php');
 
-// try {
-//   $poll = new \MyApp\Poll();
-// } catch (Exception $e) {
-//   echo $e->getMessage();
-//   exit;
-// }
+try {
+  $poll = new \MyApp\Poll();
+} catch (Exception $e) {
+  echo $e->getMessage();
+  exit;
+}
 
-// if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-//   $poll->post();
-// }
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+  $poll->post();
+}
+
+$err = $poll->getError();
 
 ?>
 <!DOCTYPE html>
@@ -20,19 +23,32 @@ require_once(__DIR__ . '/Poll.php');
   <meta charset="utf-8">
   <title>Poll</title>
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
 <body>
-  <h1 class="title">Which do you like?</h1>
+  <?php if (isset($err)) : ?>
+  <div class="error"><?= h($err); ?></div>
+  <?php endif; ?>
+  <div class="titbox">
+  <div class="title animated bounce infinite"><img src="img/title.png" alt="title"></div>
+  </div>
+  <div class="otbox">
+  <h1>あなたの好きなジョリビのメニューは？</h1>
   <form action="" method="post">
     <div class="row">
       <div class="box" id="box_0" data-id="0"></div>
       <div class="box" id="box_1" data-id="1"></div>
-      <div class="box selected" id="box_2" data-id="2"></div>
+      <div class="box" id="box_2" data-id="2"></div>
+      <div class="box" id="box_0" data-id="0"></div>
+      <div class="box" id="box_1" data-id="1"></div>
       <input type="hidden" id="answer" name="answer" value="">
+      <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
     </div>
-    <div id="btn">Vote and See Results</div>
+    <div id="btn">投票する！</div>
   </form>
+  </div>
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+  <script type="text/javascript" src="js/animate.js"></script>
   <script>
   $(function() {
     'use strict';
@@ -45,12 +61,13 @@ require_once(__DIR__ . '/Poll.php');
 
     $('#btn').on('click', function() {
       if ($('#answer').val() === '') {
-        alert('選んでください');
+        alert('Choose One!');
       } else {
         $('form').submit();
       }
     });
 
+    $('.error').fadeOut(3000);
   });
   </script>
 </body>
