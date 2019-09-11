@@ -1,3 +1,7 @@
+/*html{
+  max-width: 1200px;
+  margin: 0 auto;
+}*/
 body {
   font-size: 16px;
   font-family: Arial, sans-serif;
@@ -12,19 +16,23 @@ body {
 .otbox{
   margin: 60px auto 0 auto;
   background-color: white;
-  padding: 20px;
+  padding: 10px 20px 0 20px;
   border-radius: 20px;
 }
-
+.titimg{
+  width: 80%;
+}
 .title{
   margin: 0 auto;
-  width: 90%;
+  width: 100%;
 }
 
-h1 {
-  font-size: 22px;
+.subtit {
+  font-size: 27px;
   margin: 30px 0;
   color: black;
+  text-align: center;
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
 .row {
@@ -32,8 +40,8 @@ h1 {
 }
 
 .box {
-  width: 220px;
-  height: 220px;
+  width: 200px;
+  height: 200px;
   display: inline-block;
   opacity: 0.5;
   cursor: pointer;
@@ -41,7 +49,7 @@ h1 {
   font-size: 48px;
   font-weight: bold;
   line-height: 150px;
-  border-radius: 110px;
+  border-radius: 100px;
   margin-bottom: 20px;
 }
 
@@ -50,8 +58,10 @@ h1 {
 }
 
 #box_0{background-image: url(../img/photo_0.jpg)}
-#box_1{background-image: url(../img/photo_1.jpg)}
-#box_2{background-image: url(../img/photo_2.jpg)}
+#box_1{background-image: url(../img/photo_0.jpg)}
+#box_2{background-image: url(../img/photo_0.jpg)}
+#box_3{background-image: url(../img/photo_0.jpg)}
+#box_4{background-image: url(../img/photo_0.jpg)}
 
 .selected {
   opacity: 1.0;
@@ -61,7 +71,9 @@ h1 {
   display: inline-block;
   width: 300px;
   padding: 7px;
-  font-size: 20px;
+　font-size: 25px;
+  font-weight: bold; 
+  font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
   cursor: pointer;
   border-radius: 5px;
   background: #8b0000;
@@ -75,7 +87,30 @@ h1 {
 }
 
 .error {
-  background: orange;
+  background: white;
   padding: 7px;
-  color: #fff;
+  color: #8b0000;
+}
+
+@media screen and (max-width: 500px){
+body{
+  padding: 10px;
+}
+.otbox{
+  margin: 10px auto 0 auto;
+}
+.subtit{
+  font-size: 20px;
+  margin: 30px auto;
+  text-align: left;
+  display: inline-block;
+}
+.box{
+  width: 170px;
+  height: 170px;
+  border-radius:85px;
+}
+.titimg{
+  width: 100%;
+}
 }

@@ -22,6 +22,7 @@ $err = $poll->getError();
 <head>
   <meta charset="utf-8">
   <title>Poll</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
 </head>
@@ -30,17 +31,17 @@ $err = $poll->getError();
   <div class="error"><?= h($err); ?></div>
   <?php endif; ?>
   <div class="titbox">
-  <div class="title animated bounce infinite"><img src="img/title.png" alt="title"></div>
+  <p class="title animated slideInLeft infinite"><img src="img/title2.png" alt="title" class="titimg"></p>
   </div>
   <div class="otbox">
-  <h1>あなたの好きなジョリビのメニューは？</h1>
+  <h1 class="subtit">あなたの好きなジョリビーのメニューは？</h1>
   <form action="" method="post">
     <div class="row">
       <div class="box" id="box_0" data-id="0"></div>
       <div class="box" id="box_1" data-id="1"></div>
       <div class="box" id="box_2" data-id="2"></div>
-      <div class="box" id="box_0" data-id="0"></div>
-      <div class="box" id="box_1" data-id="1"></div>
+      <div class="box" id="box_3" data-id="0"></div>
+      <div class="box" id="box_4" data-id="1"></div>
       <input type="hidden" id="answer" name="answer" value="">
       <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
     </div>
@@ -61,7 +62,7 @@ $err = $poll->getError();
 
     $('#btn').on('click', function() {
       if ($('#answer').val() === '') {
-        alert('Choose One!');
+        alert('ひとつ選んでね');
       } else {
         $('form').submit();
       }
