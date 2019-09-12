@@ -96,7 +96,7 @@ body {
 }
 
 .otbox2{
-  max-width: 800px;
+  max-width: 900px;
   margin: 0 auto;
 }
 
@@ -141,5 +141,8 @@ body{
 }
 .titimg{
   width: 100%;
+}
+#btn{
+width: 80%;
 }
 }

@@ -41,11 +41,12 @@ class Poll {
     }
     exit;
   }
-
+  
   public function getResults() {
     $data = array_fill(0, 3, 0);
 
-    $sql = "select answer, count(id) as c from answers group by answer";
+    $sql = "select count(id) as c from poll_results";
+
     foreach ($this->_db->query($sql) as $row) {
       $data[$row['answer']] = (int)$row['c'];
     }

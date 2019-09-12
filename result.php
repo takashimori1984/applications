@@ -10,7 +10,24 @@ try {
   exit;
 }
 
+
 $results = $poll->getResults();
+// ユーザーの入力を受け取る
+$id = 1;
+
+// DBから$id1のデータを取得する
+$res = 1;
+
+// countカラムのあたいを取得する
+// countカラムのあたいを1増やす
+$res['count'] = $res['count']++;
+
+// id1のデータを更新する(countの数を1増やす)
+
+// どこかのぺーじに移動する
+
+
+
 // var_dump($results);
 // exit;
 
@@ -29,12 +46,7 @@ $results = $poll->getResults();
   <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <h1>Result ...</h1>
-    <div class="row">
-      <?php for ($i = 0; $i < 3; $i++) : ?>
-      <div class="box" id="box_<?= h($i); ?>"><?= h($results[$i]); ?></div>
-      <?php endfor; ?>
-    </div>
-    <a href="/"><div id="btn">Go Back</div></a>
+  <h1>Thank you for Review</h1>
+    <a href="index.php"><div id="btn">Go Back</div></a>
 </body>
 </html>

@@ -3,6 +3,7 @@
 require_once(__DIR__ . '/config.php');
 require_once(__DIR__ . '/Poll.php');
 
+
 try {
   $poll = new \MyApp\Poll();
 } catch (Exception $e) {
@@ -25,8 +26,13 @@ $err = $poll->getError();
   <meta name="viewport" content="width=device-width,initial-scale=1.0,minimum-scale=1.0">
   <link rel="stylesheet" type="text/css" href="css/style.css">
   <link rel="stylesheet" type="text/css" href="css/animate.css">
+  <link rel="stylesheet" type="text/css" href="css/opening.css">
 </head>
 <body>
+  <!-- オープニングアニメーション -->
+<!--<div class="bg">
+    <p class="text"><span>J</span><span>o</span><span>l</span><span>l</span><span>i</span><span>b</span><span>e</span><span>e</span></p>
+　</div> -->
   <?php if (isset($err)) : ?>
   <div class="error"><?= h($err); ?></div>
   <?php endif; ?>
@@ -35,7 +41,7 @@ $err = $poll->getError();
   </div>
   <div class="otbox">
   <h1 class="subtit">あなたの好きなジョリビーのメニューは？</h1>
-  <form action="" method="post">
+  <form action="result.php" method="post">
     <div class="row">
       <div class="bbox"><div class="box" id="box_0" data-id="0"></div>
       <p class="btxt">Chickenjoy</p></div>
