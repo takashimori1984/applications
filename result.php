@@ -43,10 +43,11 @@ $res['count'] = $res['count']++;
 <head>
   <meta charset="utf-8">
   <title>Poll Result</title>
-  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <link rel="stylesheet" type="text/css" href="css/result.css">
 </head>
 <body>
-  <h1>Thank you for Review</h1>
+  <h1 class="thtitle">Thank you for answer</h1>
+  <p class="coupon"><img src="img/coupon.jpg" alt="coupon" class="couponimg"></p>
     <a href="index.php"><div id="btn">Go Back</div></a>
 </body>
 </html>

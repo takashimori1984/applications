@@ -1,11 +1,12 @@
-
 .bg {
     width: 100vw;
-    height: 100vh;
+    height: 105vh;
     background-color: #8b0000;
     animation: bgAnime 1s linear 1.8s forwards;
+    position: absolute;
+    z-index: 2;
+    margin: 0 auto;
 }
-
 .text {
     text-align: center;
     font-size: 6vw;
@@ -13,13 +14,11 @@
     color: #fff;
     height: 1em;
     line-height: 1.2;
-    position: absolute;
     top: 0;
     left: 0;
     bottom: 0;
     right: 0;
-    margin: auto;
-    z-index: 7;
+    margin: 300px auto;
     opacity: 0;
     animation: textAnime1 .5s linear forwards;
 }
@@ -89,5 +88,6 @@
 100%{
     opacity: 0;
     display: none;
+    z-index: 0;
 }
 }

@@ -28,16 +28,15 @@ $err = $poll->getError();
   <link rel="stylesheet" type="text/css" href="css/animate.css">
   <link rel="stylesheet" type="text/css" href="css/opening.css">
 </head>
-<body>
-  <!-- オープニングアニメーション -->
-<!--<div class="bg">
+　<div class="bg">
     <p class="text"><span>J</span><span>o</span><span>l</span><span>l</span><span>i</span><span>b</span><span>e</span><span>e</span></p>
-　</div> -->
+　</div>
+  <section class="mainSite">
   <?php if (isset($err)) : ?>
   <div class="error"><?= h($err); ?></div>
   <?php endif; ?>
   <div class="titbox">
-  <p class="title animated slideInLeft infinite"><img src="img/title2.png" alt="title" class="titimg"></p>
+  <p class="title"><img src="img/title2.png" alt="title" class="titimg"></p>
   </div>
   <div class="otbox">
   <h1 class="subtit">あなたの好きなジョリビーのメニューは？</h1>
@@ -67,6 +66,7 @@ $err = $poll->getError();
   </p>
   </div>
   </div> -->
+  </section> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/animate.js"></script>
   <script>
