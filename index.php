@@ -37,17 +37,30 @@ $err = $poll->getError();
   <h1 class="subtit">あなたの好きなジョリビーのメニューは？</h1>
   <form action="" method="post">
     <div class="row">
-      <div class="box" id="box_0" data-id="0"></div>
-      <div class="box" id="box_1" data-id="1"></div>
-      <div class="box" id="box_2" data-id="2"></div>
-      <div class="box" id="box_3" data-id="0"></div>
-      <div class="box" id="box_4" data-id="1"></div>
+      <div class="bbox"><div class="box" id="box_0" data-id="0"></div>
+      <p class="btxt">Chickenjoy</p></div>
+      <div class="bbox"><div class="box" id="box_0" data-id="0"></div>
+      <p class="btxt">Jolly Spaghetti</p></div>
+      <div class="bbox"><div class="box" id="box_0" data-id="0"></div>
+      <p class="btxt">Burger Steak</p></div>
+      <div class="bbox"><div class="box" id="box_0" data-id="0"></div>
+      <p class="btxt">YUM BRUGER</p></div>
+      <div class="bbox"><div class="box" id="box_0" data-id="0"></div>
+      <p class="btxt">French fries</p></div>
       <input type="hidden" id="answer" name="answer" value="">
       <input type="hidden" name="token" value="<?= h($_SESSION['token']); ?>">
     </div>
     <div id="btn">投票する！</div>
   </form>
   </div>
+ <!--  <div class="otbox2">
+  <h3 class="title2">About Jollibee</h3>
+  <div class="txtbox">
+  <p class="txt">
+  ほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげほげ
+  </p>
+  </div>
+  </div> -->
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/animate.js"></script>
   <script>
