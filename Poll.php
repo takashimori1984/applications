@@ -99,7 +99,6 @@ class Poll {
       $user = getenv('USER_NAME');
       $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
       $this->_db = new PDO($dsn, $user, $password);
-
       // $this->_db = new \PDO(DSN, DB_USERNAME, DB_PASSWORD);
       $this->_db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     } catch (\PDOException $e) {
