@@ -89,14 +89,21 @@ class Poll {
     }
     // exit;
   }
-
+  
   private function _connectDB() {
     try {
-      $this->_db = new \PDO(DSN, DB_USERNAME, DB_PASSWORD);
+      $host = getenv(HOST_NAME);
+      $dbname = getenv(DB_NAME);
+      $charset = "utf8mb4";
+      $password = getenv(PASSWORD);
+      $user = getenv(USER_NAME);
+      $dsn = "mysql:host=$host;dbname=$dbname;charset=$charset";
+      $this->_db = new PDO($dsn, $user, $password);
+      
+      // $this->_db = new \PDO(DSN, DB_USERNAME, DB_PASSWORD);
       $this->_db->setAttribute(\PDO::ATTR_ERRMODE, \PDO::ERRMODE_EXCEPTION);
     } catch (\PDOException $e) {
       throw new \Exception('Failed to connect DB');
     }
   }
-
 }
