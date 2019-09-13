@@ -18,7 +18,7 @@
     left: 0;
     bottom: 0;
     right: 0;
-    margin: 300px auto;
+    margin: 200px auto;
     opacity: 0;
     animation: textAnime1 .5s linear forwards;
 }
@@ -52,7 +52,21 @@
 .text span:nth-child(8){
     animation: textAnime2 .6s ease-in-out .8s forwards;
 }
+.text span:nth-child(9){
+    animation: textAnime2 .6s ease-in-out .9s forwards;
+}
 
+.jolijoli{
+    width: 130px;
+}
+@media screen and (max-width: 500px){
+.jolijoli{
+    width: 80px;
+}
+.text{
+    font-size: 10vw;
+}
+}
 /*keyframe*/
 @keyframes textAnime1{
 0%{

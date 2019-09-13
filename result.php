@@ -46,8 +46,10 @@ $res['count'] = $res['count']++;
   <link rel="stylesheet" type="text/css" href="css/result.css">
 </head>
 <body>
+  <section class="otbox2">
   <h1 class="thtitle">Thank you for answer</h1>
   <p class="coupon"><img src="img/coupon.jpg" alt="coupon" class="couponimg"></p>
     <a href="index.php"><div id="btn">Go Back</div></a>
+  </section>
 </body>
 </html>

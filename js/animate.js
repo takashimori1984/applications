@@ -1,19 +1,8 @@
-$(function(){
-    $(".box").on({
-        "click":function(){
-            $(this).addClass("animated bounce");
-        },
-        "webkitAnimationEnd mozAnimationEnd MSAnimationEnd oanimationend animationend":function(){
-            $(this).removeClass("animated bounce");
-        }
-    });
-});
-
 $function(){
 $(".bg").css("display", "none");
 setTimeout(function(){
 $('.bg').fadeOut();
-},2800);
+},3800);
 });
 
 $(function(){

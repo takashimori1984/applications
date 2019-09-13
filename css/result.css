@@ -3,10 +3,11 @@ body {
   font-family: Arial, sans-serif;
   text-align: center;
   background-color: #8b0000;
-  position: relative;
-  z-index: 1;
 }
 
+.otbox2{
+  padding: 20px;
+}
 .thtitle {
   font-size: 45px;
   margin: 20px 0;
@@ -15,8 +16,8 @@ body {
   font-family:"ヒラギノ丸ゴ Pro W4","ヒラギノ丸ゴ Pro","Hiragino Maru Gothic Pro","ヒラギノ角ゴ Pro W3","Hiragino Kaku Gothic Pro","HG丸ｺﾞｼｯｸM-PRO","HGMaruGothicMPRO";
 }
 
-.coupon{
-   width: 100%;
+.couponimg{
+   width: 55%;
    margin: 30px auto;
 }
 
@@ -37,4 +38,17 @@ body {
 
 #btn:hover {
   opacity: 0.8;
+}
+
+@media screen and (max-width: 500px){
+.thtitle {
+  font-size: 30px;
+  margin: 20px 0;
+  color: orange;
+  text-align: center;
+}
+.coupon{
+  width: 100%;
+  margin: 15px auto;
+}
 }

@@ -29,7 +29,7 @@ $err = $poll->getError();
   <link rel="stylesheet" type="text/css" href="css/opening.css">
 </head>
 　<div class="bg">
-    <p class="text"><span>J</span><span>o</span><span>l</span><span>l</span><span>i</span><span>b</span><span>e</span><span>e</span></p>
+    <p class="text"><span>J</span><span>o</span><span>l</span><span>l</span><span>i</span><span>b</span><span>e</span><span>e</span><span><img src="img/jolibee.png" class="jolijoli"></span></p>
 　</div>
   <section class="mainSite">
   <?php if (isset($err)) : ?>
@@ -69,6 +69,7 @@ $err = $poll->getError();
   </section> 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
   <script type="text/javascript" src="js/animate.js"></script>
+  <script type="text/javascript" src="js/box.js"></script>
   <script>
   $(function() {
     'use strict';
